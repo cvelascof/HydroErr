@@ -1,0 +1,360 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>List of Metrics of Hydrologic Skill &#8212; HydroErr 1.00 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="me" href="api/HydroErr.HydroErr.me.html" />
+    <link rel="prev" title="Welcome to HydroErr’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api/HydroErr.HydroErr.me.html" title="me"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to HydroErr’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">HydroErr 1.00 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">List of Metrics of Hydrologic Skill</a><ul>
+<li><a class="reference internal" href="#module-HydroErr.HydroErr">HydroErr.HydroErr Module</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to HydroErr’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api/HydroErr.HydroErr.me.html"
+                        title="next chapter">me</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/list_of_metrics.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="list-of-metrics-of-hydrologic-skill">
+<h1>List of Metrics of Hydrologic Skill<a class="headerlink" href="#list-of-metrics-of-hydrologic-skill" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-HydroErr.HydroErr">
+<span id="hydroerr-hydroerr-module"></span><h2>HydroErr.HydroErr Module<a class="headerlink" href="#module-HydroErr.HydroErr" title="Permalink to this headline">¶</a></h2>
+<p>HydroErr contains a library of goodness of fit metrics that measure hydrologic skill.
+Each metric is contained in function, and every function has the parameters to treat missing values as
+well as remove zero and negative values from the timeseries data.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.me.html#HydroErr.HydroErr.me" title="HydroErr.HydroErr.me"><code class="xref py py-obj docutils literal notranslate"><span class="pre">me</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean error of the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mae.html#HydroErr.HydroErr.mae" title="HydroErr.HydroErr.mae"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mae</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean absolute error of the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.mse.html#HydroErr.HydroErr.mse" title="HydroErr.HydroErr.mse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mse</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean squared error of the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mle.html#HydroErr.HydroErr.mle" title="HydroErr.HydroErr.mle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mle</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean log error of the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.male.html#HydroErr.HydroErr.male" title="HydroErr.HydroErr.male"><code class="xref py py-obj docutils literal notranslate"><span class="pre">male</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean absolute log error of the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.msle.html#HydroErr.HydroErr.msle" title="HydroErr.HydroErr.msle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msle</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean squared log error of the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.mde.html#HydroErr.HydroErr.mde" title="HydroErr.HydroErr.mde"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mde</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the median error (MdE) between the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mdae.html#HydroErr.HydroErr.mdae" title="HydroErr.HydroErr.mdae"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mdae</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the median absolute error (MdAE) between the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.mdse.html#HydroErr.HydroErr.mdse" title="HydroErr.HydroErr.mdse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mdse</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the median squared error (MdSE) between the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.ed.html#HydroErr.HydroErr.ed" title="HydroErr.HydroErr.ed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ed</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Euclidean distance between predicted and observed values in vector space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.ned.html#HydroErr.HydroErr.ned" title="HydroErr.HydroErr.ned"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ned</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the normalized Euclidian distance between the simulated and observed data in vector space.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.rmse.html#HydroErr.HydroErr.rmse" title="HydroErr.HydroErr.rmse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmse</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the root mean square error between the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.rmsle.html#HydroErr.HydroErr.rmsle" title="HydroErr.HydroErr.rmsle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsle</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the root mean square log error between the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.nrmse_range.html#HydroErr.HydroErr.nrmse_range" title="HydroErr.HydroErr.nrmse_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nrmse_range</span></code></a>(simulated_array,&nbsp;observed_array)</td>
+<td>Compute the range normalized root mean square error between the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.nrmse_mean.html#HydroErr.HydroErr.nrmse_mean" title="HydroErr.HydroErr.nrmse_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nrmse_mean</span></code></a>(simulated_array,&nbsp;observed_array)</td>
+<td>Compute the mean normalized root mean square error between the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.nrmse_iqr.html#HydroErr.HydroErr.nrmse_iqr" title="HydroErr.HydroErr.nrmse_iqr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nrmse_iqr</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the IQR normalized root mean square error between the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.irmse.html#HydroErr.HydroErr.irmse" title="HydroErr.HydroErr.irmse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">irmse</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the inertial root mean square error (IRMSE) between the simulated and observed data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mase.html#HydroErr.HydroErr.mase" title="HydroErr.HydroErr.mase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mase</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;m,&nbsp;…])</td>
+<td>Compute the mean absolute scaled error between the simulated and observed data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.r_squared.html#HydroErr.HydroErr.r_squared" title="HydroErr.HydroErr.r_squared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">r_squared</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the Coefficient of Determination (r2).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.pearson_r.html#HydroErr.HydroErr.pearson_r" title="HydroErr.HydroErr.pearson_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pearson_r</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the pearson correlation coefficient.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.spearman_r.html#HydroErr.HydroErr.spearman_r" title="HydroErr.HydroErr.spearman_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spearman_r</span></code></a>(simulated_array,&nbsp;observed_array)</td>
+<td>Compute the spearman rank correlation coefficient.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.acc.html#HydroErr.HydroErr.acc" title="HydroErr.HydroErr.acc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acc</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the anomaly correlation coefficient (ACC).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.mape.html#HydroErr.HydroErr.mape" title="HydroErr.HydroErr.mape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mape</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the mean absolute percentage error (MAPE).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mapd.html#HydroErr.HydroErr.mapd" title="HydroErr.HydroErr.mapd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mapd</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the mean absolute percentage deviation (MAPD).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.maape.html#HydroErr.HydroErr.maape" title="HydroErr.HydroErr.maape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maape</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the Mean Arctangent Absolute Percentage Error (MAAPE).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.smape1.html#HydroErr.HydroErr.smape1" title="HydroErr.HydroErr.smape1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smape1</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the Symmetric Mean Absolute Percentage Error (1) (SMAPE1).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.smape2.html#HydroErr.HydroErr.smape2" title="HydroErr.HydroErr.smape2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smape2</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the Symmetric Mean Absolute Percentage Error (2) (SMAPE2).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.d.html#HydroErr.HydroErr.d" title="HydroErr.HydroErr.d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the index of agreement (d).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.d1.html#HydroErr.HydroErr.d1" title="HydroErr.HydroErr.d1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the index of agreement (d1).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.dmod.html#HydroErr.HydroErr.dmod" title="HydroErr.HydroErr.dmod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dmod</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;j,&nbsp;…])</td>
+<td>Compute the the modified index of agreement (dmod).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.drel.html#HydroErr.HydroErr.drel" title="HydroErr.HydroErr.drel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drel</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the relative index of agreement (drel).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.dr.html#HydroErr.HydroErr.dr" title="HydroErr.HydroErr.dr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dr</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the the refined index of agreement (dr).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.watt_m.html#HydroErr.HydroErr.watt_m" title="HydroErr.HydroErr.watt_m"><code class="xref py py-obj docutils literal notranslate"><span class="pre">watt_m</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute Watterson’s M (M).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.mb_r.html#HydroErr.HydroErr.mb_r" title="HydroErr.HydroErr.mb_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mb_r</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute Mielke-Berry R value (MB R).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.nse.html#HydroErr.HydroErr.nse" title="HydroErr.HydroErr.nse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nse</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Nash-Sutcliffe Efficiency.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.nse_mod.html#HydroErr.HydroErr.nse_mod" title="HydroErr.HydroErr.nse_mod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nse_mod</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the modified Nash-Sutcliffe efficiency (NSE mod).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.nse_rel.html#HydroErr.HydroErr.nse_rel" title="HydroErr.HydroErr.nse_rel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nse_rel</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the relative Nash-Sutcliffe efficiency (NSE rel).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.kge_2009.html#HydroErr.HydroErr.kge_2009" title="HydroErr.HydroErr.kge_2009"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kge_2009</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Kling-Gupta efficiency (2009).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.kge_2012.html#HydroErr.HydroErr.kge_2012" title="HydroErr.HydroErr.kge_2012"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kge_2012</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Kling-Gupta efficiency (2012).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.lm_index.html#HydroErr.HydroErr.lm_index" title="HydroErr.HydroErr.lm_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lm_index</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Legate-McCabe Efficiency Index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.d1_p.html#HydroErr.HydroErr.d1_p" title="HydroErr.HydroErr.d1_p"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_p</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Legate-McCabe Index of Agreement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.ve.html#HydroErr.HydroErr.ve" title="HydroErr.HydroErr.ve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ve</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Volumetric Efficiency (VE).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.sa.html#HydroErr.HydroErr.sa" title="HydroErr.HydroErr.sa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sa</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Spectral Angle (SA).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.sc.html#HydroErr.HydroErr.sc" title="HydroErr.HydroErr.sc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sc</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Spectral Correlation (SC).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.sid.html#HydroErr.HydroErr.sid" title="HydroErr.HydroErr.sid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sid</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Spectral Information Divergence (SID).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.sga.html#HydroErr.HydroErr.sga" title="HydroErr.HydroErr.sga"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sga</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the Spectral Gradient Angle (SGA).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h1_mhe.html#HydroErr.HydroErr.h1_mhe" title="HydroErr.HydroErr.h1_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h1_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H1 mean error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h1_mahe.html#HydroErr.HydroErr.h1_mahe" title="HydroErr.HydroErr.h1_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h1_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H1 absolute error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h1_rmshe.html#HydroErr.HydroErr.h1_rmshe" title="HydroErr.HydroErr.h1_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h1_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H1 root mean square error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h2_mhe.html#HydroErr.HydroErr.h2_mhe" title="HydroErr.HydroErr.h2_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h2_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H2 mean error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h2_mahe.html#HydroErr.HydroErr.h2_mahe" title="HydroErr.HydroErr.h2_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h2_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H2 mean absolute error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h2_rmshe.html#HydroErr.HydroErr.h2_rmshe" title="HydroErr.HydroErr.h2_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h2_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H2 root mean square error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h3_mhe.html#HydroErr.HydroErr.h3_mhe" title="HydroErr.HydroErr.h3_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H3 mean error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h3_mahe.html#HydroErr.HydroErr.h3_mahe" title="HydroErr.HydroErr.h3_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H3 mean absolute error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h3_rmshe.html#HydroErr.HydroErr.h3_rmshe" title="HydroErr.HydroErr.h3_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H3 root mean square error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h4_mhe.html#HydroErr.HydroErr.h4_mhe" title="HydroErr.HydroErr.h4_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h4_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H4 mean error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h4_mahe.html#HydroErr.HydroErr.h4_mahe" title="HydroErr.HydroErr.h4_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h4_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H4 mean absolute error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h4_rmshe.html#HydroErr.HydroErr.h4_rmshe" title="HydroErr.HydroErr.h4_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h4_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H4 mean error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h5_mhe.html#HydroErr.HydroErr.h5_mhe" title="HydroErr.HydroErr.h5_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h5_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H5 mean error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h5_mahe.html#HydroErr.HydroErr.h5_mahe" title="HydroErr.HydroErr.h5_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h5_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H5 mean absolute error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h5_rmshe.html#HydroErr.HydroErr.h5_rmshe" title="HydroErr.HydroErr.h5_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h5_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H5 root mean square error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h6_mhe.html#HydroErr.HydroErr.h6_mhe" title="HydroErr.HydroErr.h6_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h6_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;k,&nbsp;…])</td>
+<td>Compute the H6 mean error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h6_mahe.html#HydroErr.HydroErr.h6_mahe" title="HydroErr.HydroErr.h6_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h6_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H6 mean absolute error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h6_rmshe.html#HydroErr.HydroErr.h6_rmshe" title="HydroErr.HydroErr.h6_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h6_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H6 root mean square error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h7_mhe.html#HydroErr.HydroErr.h7_mhe" title="HydroErr.HydroErr.h7_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h7_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H7 mean error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h7_mahe.html#HydroErr.HydroErr.h7_mahe" title="HydroErr.HydroErr.h7_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h7_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H7 mean absolute error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h7_rmshe.html#HydroErr.HydroErr.h7_rmshe" title="HydroErr.HydroErr.h7_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h7_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H7 root mean square error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h8_mhe.html#HydroErr.HydroErr.h8_mhe" title="HydroErr.HydroErr.h8_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h8_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H8 mean error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h8_mahe.html#HydroErr.HydroErr.h8_mahe" title="HydroErr.HydroErr.h8_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h8_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H8 mean absolute error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h8_rmshe.html#HydroErr.HydroErr.h8_rmshe" title="HydroErr.HydroErr.h8_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h8_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H8 root mean square error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h10_mhe.html#HydroErr.HydroErr.h10_mhe" title="HydroErr.HydroErr.h10_mhe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h10_mhe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H10 mean error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.h10_mahe.html#HydroErr.HydroErr.h10_mahe" title="HydroErr.HydroErr.h10_mahe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h10_mahe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H10 mean absolute error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.h10_rmshe.html#HydroErr.HydroErr.h10_rmshe" title="HydroErr.HydroErr.h10_rmshe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h10_rmshe</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the H10 root mean square error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/HydroErr.HydroErr.g_mean_diff.html#HydroErr.HydroErr.g_mean_diff" title="HydroErr.HydroErr.g_mean_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">g_mean_diff</span></code></a>(simulated_array,&nbsp;observed_array)</td>
+<td>Compute the geometric mean difference.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/HydroErr.HydroErr.mean_var.html#HydroErr.HydroErr.mean_var" title="HydroErr.HydroErr.mean_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_var</span></code></a>(simulated_array,&nbsp;observed_array[,&nbsp;…])</td>
+<td>Compute the mean variance.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api/HydroErr.HydroErr.me.html" title="me"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to HydroErr’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">HydroErr 1.00 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Wade Roberts, Gustavious Williams.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+    </div>
+  </body>
+</html>
