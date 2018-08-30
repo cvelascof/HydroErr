@@ -103,12 +103,6 @@ computation.</li>
 <li><strong>remove_zero</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If true, when a zero value is found at the i-th position in the observed OR simulated
 array, the i-th value of the observed AND simulated array are removed before the
 computation.</li>
-<li><strong>import HydroErr as he</strong> (<em>&gt;&gt;&gt;</em>) – </li>
-<li><strong>import numpy as np</strong> (<em>&gt;&gt;&gt;</em>) – </li>
-<li><strong>sim = np.array</strong><strong>(</strong><strong>[</strong><strong>5</strong><strong>, </strong><strong>7</strong><strong>, </strong><strong>9</strong><strong>, </strong><strong>2</strong><strong>, </strong><strong>4.5</strong><strong>, </strong><strong>6.7</strong><strong>]</strong><strong>)</strong> (<em>&gt;&gt;&gt;</em>) – </li>
-<li><strong>obs = np.array</strong><strong>(</strong><strong>[</strong><strong>4.7</strong><strong>, </strong><strong>6</strong><strong>, </strong><strong>10</strong><strong>, </strong><strong>2.5</strong><strong>, </strong><strong>4</strong><strong>, </strong><strong>7</strong><strong>]</strong><strong>)</strong> (<em>&gt;&gt;&gt;</em>) – </li>
-<li><strong>he.spearman_r</strong><strong>(</strong><strong>sim</strong><strong>, </strong><strong>obs</strong><strong>)</strong> (<em>&gt;&gt;&gt;</em>) – </li>
-<li><strong>0.942857142857143</strong> – </li>
 </ul>
 </td>
 </tr>
@@ -120,6 +114,17 @@ computation.</li>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">HydroErr</span> <span class="k">as</span> <span class="nn">he</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">6.7</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">he</span><span class="o">.</span><span class="n">spearman_r</span><span class="p">(</span><span class="n">sim</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<span class="go">0.942857142857143</span>
+</pre></div>
+</div>
 <p class="rubric">References</p>
 <ul class="simple">
 <li>Spearman C (1904). “The proof and measurement of association between two things”. American
