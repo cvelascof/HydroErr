@@ -76,7 +76,7 @@
 <h1>kge_2012<a class="headerlink" href="#kge-2012" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="HydroErr.HydroErr.kge_2012">
-<code class="descclassname">HydroErr.HydroErr.</code><code class="descname">kge_2012</code><span class="sig-paren">(</span><em>simulated_array</em>, <em>observed_array</em>, <em>s=(1</em>, <em>1</em>, <em>1)</em>, <em>replace_nan=None</em>, <em>replace_inf=None</em>, <em>remove_neg=False</em>, <em>remove_zero=False</em><span class="sig-paren">)</span><a class="headerlink" href="#HydroErr.HydroErr.kge_2012" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">HydroErr.HydroErr.</code><code class="descname">kge_2012</code><span class="sig-paren">(</span><em>simulated_array</em>, <em>observed_array</em>, <em>s=(1</em>, <em>1</em>, <em>1)</em>, <em>replace_nan=None</em>, <em>replace_inf=None</em>, <em>remove_neg=False</em>, <em>remove_zero=False</em>, <em>return_all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#HydroErr.HydroErr.kge_2012" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the Kling-Gupta efficiency (2012).</p>
 <img alt="../_images/KGE_2012.png" src="../_images/KGE_2012.png" />
 <p><strong>Range:</strong> -inf &lt; KGE (2012) &lt; 1, does not indicate bias, larger is better.</p>
@@ -103,13 +103,14 @@ computation.</li>
 <li><strong>remove_zero</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If true, when a zero value is found at the i-th position in the observed OR simulated
 array, the i-th value of the observed AND simulated array are removed before the
 computation.</li>
+<li><strong>return_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – If True, returns all of the components of the KGE metric, which are r, gamma, and beta, respectively.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The Kling-Gupta (2012) efficiency value.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The Kling-Gupta (2012) efficiency value, unless the return_all parameter is True.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a> (tuple of float)</p>
 </td>
 </tr>
 </tbody>
@@ -120,9 +121,13 @@ computation.</li>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">6.7</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">he</span><span class="o">.</span><span class="n">kge_2012</span><span class="p">(</span><span class="n">sim</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
 <span class="go">0.9122230723456678</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">he</span><span class="o">.</span><span class="n">kge_2012</span><span class="p">(</span><span class="n">sim</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">return_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Returns (r, alpha, beta, kge)</span>
+<span class="go">(0.9615951377405804, 0.9224843295231272, 1.0058823529411764, 0.9132923608280753)</span>
 </pre></div>
 </div>
 <p class="rubric">References</p>

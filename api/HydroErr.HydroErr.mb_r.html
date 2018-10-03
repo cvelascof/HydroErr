@@ -111,6 +111,28 @@ computation.</li>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>If a more optimized version is desired, the <a class="reference external" href="http://numba.pydata.org/doc.html">numba package</a> can be implemented
+for a much more optimized performance when computing this metric. An example is given below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numba</span> <span class="k">import</span> <span class="n">njit</span><span class="p">,</span> <span class="n">prange</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fastmath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">mb_par_fastmath</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>  <span class="c1"># uses LLVM compiler</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">assert</span> <span class="n">pred</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="n">obs</span><span class="o">.</span><span class="n">size</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">n</span> <span class="o">=</span> <span class="n">pred</span><span class="o">.</span><span class="n">size</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">tot</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">mae</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">prange</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">tot</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">obs</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">mae</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">obs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">mae</span> <span class="o">=</span> <span class="n">mae</span> <span class="o">/</span> <span class="n">n</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">mb</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">((</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">mae</span> <span class="o">/</span> <span class="n">tot</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">return</span> <span class="n">mb</span>
+</pre></div>
+</div>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">HydroErr</span> <span class="k">as</span> <span class="nn">he</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
